@@ -1,4 +1,5 @@
 import React from 'react';
+import Dashboard from './dashboard/Dashboard';
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
           Agomotto is our internal monitoring, analysis, and policing tool for developers working on our main app, Boujè. It plays a crucial role in ensuring the safety of our platform by checking posts for explicit content and performing various safety checks.
         </p>
         {/* dashboard goes here */}
+        <Dashboard />
       </main>
       {/* Add more content to make the page longer */}
       <footer className="fixed bottom-0 left-0 p-8 space-x-8">

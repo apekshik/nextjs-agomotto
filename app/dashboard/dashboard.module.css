@@ -1,0 +1,47 @@
+/* styles/dashboard.module.css */
+.dashboardHeader {
+    padding: 16px 32px;
+    background-color: #333; /* Adjust the color to match your design */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .searchBar {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .statusCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .statusCard {
+    background-color: #444; /* Adjust the color to match your design */
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px; /* Adjust size as needed */
+    text-align: center;
+  }
+  
+  .resultCardsContainer {
+    padding: 16px;
+  }
+  
+  .resultCard {
+    background-color: #555; /* Adjust the color to match your design */
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+  
+  /* Additional styles can go here */
+  

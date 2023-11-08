@@ -4,12 +4,13 @@ import Image from "next/image";
 import {RxSketchLogo, RxDashboard, RxPerson} from 'react-icons/rx';
 import {HiOutlineShoppingBag} from 'react-icons/hi';
 import {FiSettings } from 'react-icons/fi'
+import styles from '../dashboard.module.css';
 
-type SidebarProps = {
+type SideBarProps = {
   children?: React.ReactNode;
 };
 
-const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+const SideBar: React.FC<SideBarProps> = ({ children }) => {
   return (
     <div className="flex">
       <div className="fixed flex w-20 h-screen p-4 border-r-[1px] flex-col justify-between 
@@ -48,4 +49,4 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
