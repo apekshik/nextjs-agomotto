@@ -16,6 +16,13 @@
   }
 }
 
+#dashboard{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -37,3 +44,5 @@ body {
     rgb(var(--background-end-rgb));
   }
 }
+
+
