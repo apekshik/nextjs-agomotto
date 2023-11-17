@@ -24,7 +24,7 @@ export default function RootLayout({
           <nav className="fixed top-0 right-0 p-8 space-x-16">
             <a className="text-white font-bold" href="/">Home</a>
             <a className="text-white font-bold" href="/contact">Contact</a>
-            <button className="bg-black text-white px-4 py-2 rounded font-bold">Dashboard</button>
+            <a className="bg-black text-white px-4 py-2 rounded font-bold" href='/dashboard'>Dashboard</a>
           </nav>
           {children}
           <footer className="fixed bottom-0 left-0 p-8 space-x-8">

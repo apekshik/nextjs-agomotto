@@ -1,12 +1,10 @@
 import { cards } from "../lib/data";
 import Card from "../ui/dashboard/card/card";
-import Chart from "../ui/dashboard/chart/chart";
 import styles from "../ui/dashboard/dashboard.module.css";
 import Rightbar from "../ui/dashboard/rightbar/rightbar";
-import Transactions from "../ui/dashboard/transactions/transactions";
+import Results from "../ui/dashboard/results/results";
 import Navbar from "../ui/dashboard/navbar/navbar"
 import Sidebar from "../ui/dashboard/sidebar/sidebar"
-import Footer from "../ui/dashboard/footer/footer"
 
 const Dashboard = () => {
   return (
@@ -24,12 +22,9 @@ const Dashboard = () => {
                             <Card item={item} key={item.id} />
                         ))}
                         </div>
-                        <Transactions />
-                        <Chart />
+                        <Results />
                     </div>
-                    
                 </div>
-                <Footer/>
             </div>
             <div className={styles.side}>
                 <Rightbar />
