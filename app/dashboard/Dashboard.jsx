@@ -4,32 +4,6 @@ import { ResultCard } from './components/ResultCard';
 import SearchBar from "./components/SearchBar";
 import styles from './dashboard.module.css';
 
-// const DashboardPage = () => {
-//   return (
-//     <div className="dashboard-container">
-//       <header>
-//         <h1>Dashboard</h1>
-//         <SearchBar />
-//         {/* Other header items */}
-//       </header>
-
-//       <section className="status-section">
-//         <StatusCard serviceName="Storage" status="Connected" />
-//         <StatusCard serviceName="Firestore" status="Connected" />
-//         {/* ... Other statuses */}
-//       </section>
-
-//       <section className="results-section">
-//         <h2>Results</h2>
-//         <ResultCard caption="CAPTION" time="TIME OF POST" />
-//         {/* Repeat <ResultCard /> for each result */}
-//       </section>
-
-//       {/* ... Other sections as needed */}
-//     </div>
-//   );
-// };
-
 
 const Dashboard = () => {
   // Assuming you will fetch or calculate these statuses and results

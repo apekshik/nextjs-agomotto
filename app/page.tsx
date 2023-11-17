@@ -4,9 +4,8 @@ import React from 'react';
 import Dashboard from './dashboard/Dashboard';
 import { useState } from 'react';
 
-
 const HomePage = () => {
-  // const [showDashboard, setShowDashboard] = useState(false);
+  const [showDashboard, setShowDashboard] = useState(false);
   const [isDashboardVisible, setIsDashboardVisible] = useState(false);
 
   const toggleDashboardVisibility = () => {
@@ -20,23 +19,8 @@ const HomePage = () => {
     }
   };
   
-  // const toggleDashboard = () => {
-  //   setShowDashboard(!showDashboard);
-  //   if (!showDashboard) {
-  //     scrollToDashboard();
-  //   }
-  // };
 
   return (
-    <div className="min-h-[200vh] bg-gradient-to-br from-black via-green-200 to-black text-white">
-      <header className="fixed top-0 left-0 p-8 text-xl font-bold">
-        Agomotto
-      </header>
-      <nav className="fixed top-0 right-0 p-8 space-x-16">
-        <a className="text-white font-bold" href="/">Home</a>
-        <a className="text-white font-bold" href="/contact">Contact</a>
-        <button onClick={toggleDashboardVisibility} className="bg-black text-white px-4 py-2 rounded font-bold">Dashboard</button>
-      </nav>
       <main className="h-screen flex flex-col justify-center items-center p-8">
         <div className="text-3xl font-semibold text-center">
           Welcome to Agomotto
@@ -48,14 +32,7 @@ const HomePage = () => {
           <Dashboard />
         </section>)}
       </main>
-      {/* Add more content to make the page longer */}
-      <footer className="fixed bottom-0 left-0 p-8 space-x-8">
-        <a className="text-white" href="/about">About</a>
-        <a className="text-white" href="/services">Services</a>
-        <a className="text-white" href="/blog">Blog</a>
-        <a className="text-white" href="/contact">Contact</a>
-      </footer>
-    </div>
+      /* Add more content to make the page longer */
   );
 };
 

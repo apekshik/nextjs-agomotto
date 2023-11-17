@@ -16,7 +16,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="min-h-[200vh] bg-gradient-to-br from-black via-green-200 to-black text-white">
+          <header className="fixed top-0 left-0 p-8 text-xl font-bold">
+            Agomotto
+          </header>
+          <nav className="fixed top-0 right-0 p-8 space-x-16">
+            <a className="text-white font-bold" href="/">Home</a>
+            <a className="text-white font-bold" href="/contact">Contact</a>
+            <button className="bg-black text-white px-4 py-2 rounded font-bold">Dashboard</button>
+          </nav>
+          {children}
+          <footer className="fixed bottom-0 left-0 p-8 space-x-8">
+            <a className="text-white" href="/about">About</a>
+            <a className="text-white" href="/services">Services</a>
+            <a className="text-white" href="/blog">Blog</a>
+            <a className="text-white" href="/contact">Contact</a>
+          </footer>
+        </div>
+      </body>
     </html>
   )
 }

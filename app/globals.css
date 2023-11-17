@@ -16,12 +16,12 @@
   }
 }
 
-#dashboard{
+/* #dashboard{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -45,4 +45,7 @@ body {
   }
 }
 
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
