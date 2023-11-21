@@ -17,10 +17,10 @@ const Results = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Name</td>
+            <td>Post</td>
+            <td>Caption</td>
+            <td>Time Of Post</td>
             <td>Status</td>
-            <td>Date</td>
-            <td>Amount</td>
           </tr>
         </thead>
         <tbody>
@@ -37,13 +37,13 @@ const Results = () => {
                 John Doe
               </div>
             </td>
+            <td>Fire</td>
+            <td>14.02.2024</td>
             <td>
               <span className={`${styles.status} ${styles.pending}`}>
                 Pending
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
           </tr>
           <tr className={styles.tr}>
             <td>
@@ -58,11 +58,11 @@ const Results = () => {
                 John Doe
               </div>
             </td>
+            <td>Yikes</td>
+            <td>14.02.2024</td>
             <td>
               <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
           </tr>
           <tr className={styles.tr}>
             <td>
@@ -77,13 +77,13 @@ const Results = () => {
                 John Doe
               </div>
             </td>
+            <td>This is a caption</td>
+            <td>14.02.2024</td>
             <td>
               <span className={`${styles.status} ${styles.cancelled}`}>
                 Cancelled
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
           </tr>
           <tr className={styles.tr}>
             <td>
@@ -98,13 +98,13 @@ const Results = () => {
                 John Doe
               </div>
             </td>
+            <td>Hello</td>
+            <td>14.02.2024</td>
             <td>
               <span className={`${styles.status} ${styles.pending}`}>
                 Pending
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
           </tr>
         </tbody>
       </table>

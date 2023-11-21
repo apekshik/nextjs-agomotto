@@ -1,5 +1,4 @@
 .container{
-  background-color: var(--bgSoft);
   padding: 20px;
   border-radius:10px;
   background-color: #4a5264;
@@ -45,8 +44,8 @@
 }
 
 .table tbody tr {
-  border: 3px solid #293144; /* Adjust border color and width as needed */
   border-radius: 5px;
+  border: 3px solid #293144; /* Adjust border color and width as needed */
 }
 
 .table td{

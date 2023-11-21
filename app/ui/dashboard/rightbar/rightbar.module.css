@@ -1,6 +1,6 @@
 .container {
   position: fixed;
-  padding-right: 32px;
+  padding-inline: 36px;
 }
 
 .item {
