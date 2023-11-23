@@ -82,7 +82,7 @@ const Sidebar = async () => {
           </li>
         ))}
       </ul>
-      <form
+      {/* <form
         action={async () => {
           "use server";
           await signOut();
@@ -92,7 +92,7 @@ const Sidebar = async () => {
           <MdLogout />
           Logout
         </button>
-      </form>
+      </form> */}
     </div>
   );
 };
