@@ -9,7 +9,7 @@ const Card = ({ item }) => {
         <span className={styles.title}>{item.title}</span>
         <span className={styles.number}>
           Connection: {""}  
-          <span className={item.contectionStatus == "connected" ? styles.positive : styles.negative}>{item.contectionStatus}</span>
+          <span className={item.connectionStatus ? styles.positive : styles.negative}>{item.connectionStatus ? "Connected" : "Not connected"}</span>
         </span>
         <span className={styles.detail}>
           Check detail: {item.link}
