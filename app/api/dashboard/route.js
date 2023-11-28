@@ -34,9 +34,7 @@ const checkGoogleCloudStorageConnection = async () => {
 export async function GET(req) {
   console.log("Check connection!");
   const firestoreConnected = await checkFirestoreConnection();
-  // console.log(firestoreConnected);
   const storageConnected = await checkGoogleCloudStorageConnection();
-  // console.log(storageConnected);
 
   return NextResponse.json({
     firestoreStatus: firestoreConnected,

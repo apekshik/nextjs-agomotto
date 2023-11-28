@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback} from 'react';
 import Card from "../ui/dashboard/card/card";
 import styles from "../ui/dashboard/dashboard.module.css";
 import Results from "../ui/dashboard/results/results";
@@ -18,27 +18,30 @@ const Dashboard = () => {
     },
   ]);
 
-  const updateCardStatus = (index, status) => {
-    const newCards = [...cards];
-    newCards[index].connectionStatus = status;
-    setCards(newCards);
-  };
+  const updateCardStatus = useCallback((index, status) => {
+    setCards((prevCards) => {
+      const newCards = [...prevCards];
+      newCards[index].connectionStatus = status;
+      return newCards;
+    });
+  }, []);
 
-  const loadPage = async () => {
+  const loadPage = useCallback(async () => {
     try {
       const res = await fetch('api/dashboard', { method: "GET" });
-      const {firestoreStatus, googleCloudStorageStatus} = await res.json();
+      // const res = await fetch('api/dashboard', { method: "GET" });
+      const { firestoreStatus, googleCloudStorageStatus } = await res.json();
 
       updateCardStatus(0, firestoreStatus);
       updateCardStatus(1, googleCloudStorageStatus);
     } catch (error) {
       console.error("Failed to load dashboard data:", error);
     }
-  };
+  }, [updateCardStatus]);
 
   useEffect(() => {
     loadPage();
-  }, []);
+  }, [loadPage]);
 
   return (
     <div className={styles.wrapper}>
