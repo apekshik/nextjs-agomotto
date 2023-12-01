@@ -1,6 +1,6 @@
 .container{
   position: fixed;
-  padding-left: 110px;
+  padding-inline: 50px;
 }
 
 .user{

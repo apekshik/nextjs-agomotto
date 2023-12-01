@@ -8,17 +8,19 @@
   color: var(--textSoft);
   font-weight: bold;
   font-size: x-large;
+  padding-right: 20px;
 }
 
 
 /* filter */
 .navbar {
   padding-inline: 20px;
+  padding-bottom: 10px;
   border-radius: 10px;
   background-color: var(--bgSoft);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .search {
@@ -44,8 +46,11 @@
 }
 
 .table tbody tr {
-  border-radius: 5px;
-  border: 3px solid #293144; /* Adjust border color and width as needed */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  border-radius: 15px;
+  border: 3px solid #293144;
 }
 
 .table td{
@@ -80,4 +85,62 @@
 
 .cancelled{
   background-color: #f7737375;
+}
+
+.table_cell {
+  vertical-align: top; /* Aligns content to the top */
+  padding: 10px; /* Adds some spacing around content */
+}
+
+.caption_time {
+  display: block; /* Makes the span behave like a block element */
+  margin-bottom: 5px; /* Adds some space between caption and time */
+}
+
+.status_cell{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.image_cell img {
+  width: 100px; /* Adjusts the size of the image */
+  height: auto;
+  border: 3px solid #293144;
+}
+
+/* Container for the filter */
+.filter {
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Centers items vertically */
+  padding: 5px; /* Adds some space around */
+  background-color: #f0f0f0; /* Light grey background, adjust as needed */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles for the dropdown */
+.dropdown {
+  color: #2e374a;
+  border: 1px solid #ccc; /* Light grey border */
+  padding: 5px 10px; /* Padding inside the dropdown */
+  margin-left: 10px; /* Space between icon and dropdown */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor indicates it's clickable */
+}
+
+/* Additional styling can be applied for hover effects, focus, etc. */
+.dropdown:hover {
+  border-color: #888; /* Darker border on hover */
+}
+
+/* Adjustments for the icon - assuming it's an SVG */
+.filter svg {
+  fill: #666; /* Icon color */
+  width: 24px; /* Icon width */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Indicates the icon is interactive */
+}
+
+/* Style for the icon when hovered */
+.filter svg:hover {
+  fill: #333; /* Darker icon color on hover */
 }

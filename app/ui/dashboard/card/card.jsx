@@ -4,16 +4,20 @@ import styles from "./card.module.css";
 const Card = ({ item }) => {
   return (
     <div className={styles.container}>
-      <MdDataUsage size={24} />
       <div className={styles.texts}>
-        <span className={styles.title}>{item.title}</span>
+        <div>
+          <MdDataUsage size={24} /> 
+          <span className={styles.title}> {item.databasePlatform}</span>
+        </div>
         <span className={styles.number}>
-          Connection: {""}  
+          Connection to <em>{item.title}:</em> {""} <br />  
           <span className={item.connectionStatus ? styles.positive : styles.negative}>{item.connectionStatus ? "Connected" : "Not connected"}</span>
         </span>
-        <span className={styles.detail}>
-          Check detail: {item.link}
-        </span>
+        {item.connectionStatus && (
+          <span className={styles.detail}>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">Click to check out the database</a>
+          </span>
+        )}
       </div>
     </div>
   );

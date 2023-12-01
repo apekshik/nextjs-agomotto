@@ -9,23 +9,32 @@ const Results = () => {
     <div className={styles.container}>
       <div className={styles.navbar}>
         <h2 className={styles.title}>Results</h2>
-        <div className={styles.search}>
+        <div className={styles.filter}>
+          <MdOutlineFilterList />
+          <select className={styles.dropdown}>
+              <option value="">Filter</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+          </select>
+        </div>
+        {/* <div className={styles.search}>
           <MdOutlineFilterList />
           <input type="text" placeholder="Filter" className={styles.input} />
-        </div>
+        </div> */}
       </div>
       <table className={styles.table}>
-        <thead>
+        {/* <thead>
           <tr>
             <td>Post</td>
             <td>Caption</td>
             <td>Time Of Post</td>
             <td>Status</td>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           <tr>
-            <td>
+            <td className={styles.image_cell}>
               <div className={styles.user}>
                 <Image
                   src="/noavatar.png"
@@ -34,19 +43,20 @@ const Results = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
               </div>
             </td>
-            <td>Fire</td>
-            <td>14.02.2024</td>
-            <td>
-              <span className={`${styles.status} ${styles.pending}`}>
+            <td className={styles.table_cell}>
+              <div className={styles.caption_time}>Caption: Fire</div>
+              <div className={styles.caption_time}>Time of Post: 14.02.2024</div>
+            </td>
+            <td className={styles.status_cell}>
+              <span className={`${styles.table_cell} ${styles.status} ${styles.pending}`}>
                 Pending
               </span>
             </td>
           </tr>
-          <tr className={styles.tr}>
-            <td>
+          <tr>
+            <td className={styles.image_cell}>
               <div className={styles.user}>
                 <Image
                   src="/noavatar.png"
@@ -55,57 +65,63 @@ const Results = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
               </div>
             </td>
-            <td>Yikes</td>
-            <td>14.02.2024</td>
-            <td>
-              <span className={`${styles.status} ${styles.done}`}>Done</span>
+            <td className={styles.table_cell}>
+              <div className={styles.caption_time}>Caption: Fire</div>
+              <div className={styles.caption_time}>Time of Post: 14.02.2024</div>
             </td>
-          </tr>
-          <tr className={styles.tr}>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>This is a caption</td>
-            <td>14.02.2024</td>
-            <td>
-              <span className={`${styles.status} ${styles.cancelled}`}>
-                Cancelled
-              </span>
-            </td>
-          </tr>
-          <tr className={styles.tr}>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>Hello</td>
-            <td>14.02.2024</td>
-            <td>
-              <span className={`${styles.status} ${styles.pending}`}>
+            <td  className={styles.status_cell}>
+              <span className={`${styles.table_cell} ${styles.status} ${styles.pending}`}>
                 Pending
               </span>
             </td>
           </tr>
+          <tr>
+            <td className={styles.image_cell}>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td className={styles.table_cell}>
+              <div className={styles.caption_time}>Caption: Fire</div>
+              <div className={styles.caption_time}>Time of Post: 14.02.2024</div>
+            </td>
+            <td className={styles.status_cell}>
+              <span className={`${styles.table_cell} ${styles.status} ${styles.cancelled}`}>
+                Cancelled                
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td className={styles.image_cell}>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td className={styles.table_cell}>
+              <div className={styles.caption_time}>Caption: Fire</div>
+              <div className={styles.caption_time}>Time of Post: 14.02.2024</div>
+            </td>
+            <td className={styles.status_cell}>
+              <span className={`${styles.table_cell} ${styles.status} ${styles.done}`}>
+                Done
+              </span>
+            </td>
+          </tr>
+
         </tbody>
       </table>
     </div>
