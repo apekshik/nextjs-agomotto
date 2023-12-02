@@ -26,11 +26,11 @@ const checkFirestoreConnection = async () => {
       const connected = !snapshot.empty;
       firestoreOutput.connectionStatus = connected; 
       if (connected) {
-        firestoreOutput.link = urlLinkTemplate.replace('{storeType}', 'Firestore').replace('{datatype}', 'data');
+        firestoreOutput.link = urlLinkTemplate.replace('{storageType}', 'Firestore').replace('{datatype}', 'data');
       }
       firestoreOutputs.push(firestoreOutput); 
     }
-    // console.log(firestoreOutputs);
+    console.log(firestoreOutputs);
     return firestoreOutputs;
   } catch (error) {
     console.log("error happened in check firestore");
@@ -53,7 +53,7 @@ const checkGoogleCloudStorageConnection = async () => {
       } 
       cloudStorageOutputs.push(cloudStorageOutput);
     }
-    // console.log(cloudStorageOutputs);
+    console.log(cloudStorageOutputs);
     return cloudStorageOutputs;
   } catch (error) {
     console.log("error happened in check google cloud");
@@ -67,7 +67,8 @@ export async function GET(req) {
   const firestoreConnected = await checkFirestoreConnection();
   const storageConnected = await checkGoogleCloudStorageConnection();
   var output = [...firestoreConnected, ...storageConnected];
-  // console.log(output)
+  console.log(output)
 
   return NextResponse.json(output)
 }
+

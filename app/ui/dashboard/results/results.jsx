@@ -18,20 +18,8 @@ const Results = () => {
               <option value="option3">Option 3</option>
           </select>
         </div>
-        {/* <div className={styles.search}>
-          <MdOutlineFilterList />
-          <input type="text" placeholder="Filter" className={styles.input} />
-        </div> */}
       </div>
       <table className={styles.table}>
-        {/* <thead>
-          <tr>
-            <td>Post</td>
-            <td>Caption</td>
-            <td>Time Of Post</td>
-            <td>Status</td>
-          </tr>
-        </thead> */}
         <tbody>
           <tr>
             <td className={styles.image_cell}>
