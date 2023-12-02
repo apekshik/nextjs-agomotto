@@ -1,0 +1,4 @@
+firebase_admin
+google-cloud-firestore
+google-cloud-vision
+google-cloud-language

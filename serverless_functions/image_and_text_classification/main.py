@@ -6,7 +6,7 @@ from google.cloud import language_v1
 vision_client = vision.ImageAnnotatorClient()
 language_client = language_v1.LanguageServiceClient()
 
-def image_classification(event, context):
+def image_and_text_classification(event, context):
     document_id = context.resource.split('/documents/')[1].split('/')[1]
 
     firestore_client = firestore.Client()
