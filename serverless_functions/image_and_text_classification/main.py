@@ -2,11 +2,15 @@ import os
 from google.cloud import firestore
 from google.cloud import vision
 from google.cloud import language_v1
+import time
 
 vision_client = vision.ImageAnnotatorClient()
 language_client = language_v1.LanguageServiceClient()
 
 def image_and_text_classification(event, context):
+    start_time = time.time()
+    print(f"Request received at: {start_time}")
+
     document_id = context.resource.split('/documents/')[1].split('/')[1]
 
     firestore_client = firestore.Client()
@@ -58,6 +62,9 @@ def image_and_text_classification(event, context):
 
         if text_classification == 'hate':
             classification = 'hate'
+
+    end_time = time.time()
+    print(f"Request finished at: {end_time}")
     
     document_ref.update({'classification': classification})
     print(f"Document with ID {document_id} classified as {classification}.")

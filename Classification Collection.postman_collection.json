@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "89aff40c-aff5-45a0-b1c3-4827086c99ae",
+		"name": "Classification Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31555575"
+	},
+	"item": [
+		{
+			"name": "https://us-central1-fir-eris.cloudfunctions.net/test_firestore_creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImU0YWRmYjQzNmI5ZTE5N2UyZTExMDZhZjJjODQyMjg0ZTQ5ODZhZmYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE3MzcxMjEzNTczMzk5NzI3NDcwIiwiaGQiOiJ1bW4uZWR1IiwiZW1haWwiOiJhbmRyMDgyMUB1bW4uZWR1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJjQ1NTSzBreG5Jd3AwVHVxODZ5dTVnIiwiaWF0IjoxNzAxNTY4Mzk3LCJleHAiOjE3MDE1NzE5OTd9.GSKvPeGE0TDoWXqxMdciKXmOovO2aCsTbXpQaP6YTG-yCwy3TK0nLWVyZuxZ7ggMQ6N6-LlqZqbieYbNBVS8O19OVnK6tdCbkDEE3fQc-WvdRepiK4aYogWf_vxIvjX9QpGVl3JMp5ZasGT7R3yrMRCsSg7zWZfjNmbdcirQ_V8QdRWAAhpSrBNwlyneuUx12aE68IrOsrjVOhjQgfLxZgDwQd9JDneh83QVmt6fSgAyfBJWkdtdKzAKCKeM2Ko14_zpaWBCg10VBWOQJMvKni4B4Y9qvesGOWZHPTfx6t0ThYj9nQWNv1d2wLX0qwJQkDDO8Vnexz95aG8dL-8PcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-fir-eris.cloudfunctions.net/test_firestore_creation",
+					"protocol": "https",
+					"host": [
+						"us-central1-fir-eris",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"test_firestore_creation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -55,7 +55,7 @@ mock_document = {
     'connectedPostImageURL': 'http://example.com/connected_image.jpg'
 }
 
-duration_seconds = 10
+duration_seconds = 1
 max_throughput = 20
 step = 1
 
